@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-image: url('./speedline.svg');
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8%;
+    text-align: center;
+}
+
+header > h1 {
+    font-size: 4vw;
+}
+
+header button {
+    width: 150px;
+    height: 45px;
+    margin: 20px 0px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    animation: pulseBtn 1s infinite forwards alternate;
+}
+
+header button:hover {
+    animation-duration: 0.3s;
+}
+
+@keyframes pulseBtn {
+    0% {
+        transform: scale(0.8);
+    }
+    
+    50% {
+        transform: scale(1.1);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header > h1 {
+        font-size: 8vw;
+    }
+}
